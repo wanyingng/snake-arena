@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 220 25% 8%;
+    --foreground: 180 5% 96%;
+
+    --card: 220 20% 12%;
+    --card-foreground: 180 5% 96%;
+
+    --popover: 220 20% 10%;
+    --popover-foreground: 180 5% 96%;
+
+    --primary: 190 95% 55%;
+    --primary-foreground: 220 25% 8%;
+
+    --secondary: 25 95% 58%;
+    --secondary-foreground: 220 25% 8%;
+
+    --muted: 220 15% 20%;
+    --muted-foreground: 180 5% 70%;
+
+    --accent: 145 80% 55%;
+    --accent-foreground: 220 25% 8%;
+
+    --destructive: 0 85% 60%;
+    --destructive-foreground: 180 5% 96%;
+
+    --border: 220 15% 18%;
+    --input: 220 15% 18%;
+    --ring: 190 95% 55%;
+
+    --radius: 0.5rem;
+
+    /* Gaming-specific tokens */
+    --game-grid: 220 15% 15%;
+    --snake-color: 145 80% 55%;
+    --food-color: 25 95% 58%;
+    --glow-primary: 190 95% 55%;
+    --glow-accent: 145 80% 55%;
+    
+    /* Leaderboard tokens */
+    --gold: 45 100% 60%;
+    --silver: 0 0% 75%;
+    --bronze: 30 60% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Orbitron', 'Inter', sans-serif;
+    font-weight: 700;
+  }
+}
+
+@layer utilities {
+  .glow-primary {
+    box-shadow: 0 0 20px hsl(var(--glow-primary) / 0.5);
+  }
+
+  .glow-accent {
+    box-shadow: 0 0 20px hsl(var(--glow-accent) / 0.5);
+  }
+
+  .text-glow {
+    text-shadow: 0 0 10px currentColor;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}

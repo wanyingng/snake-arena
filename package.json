@@ -1,0 +1,18 @@
+{
+  "name": "snake-arena",
+  "version": "1.0.0",
+  "description": "Snake Arena - Full Stack Application",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "dev:backend": "cd backend && make dev",
+    "dev:frontend": "cd frontend && npm run dev",
+    "install:all": "cd backend && uv sync && cd ../frontend && npm install",
+    "test": "concurrently \"npm run test:backend\" \"npm run test:frontend\"",
+    "test:backend": "cd backend && make test",
+    "test:frontend": "cd frontend && npm test"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.0"
+  }
+}
