@@ -1,6 +1,6 @@
 # 🐍 Snake Arena
 
-> **A modern, multiplayer Snake game with real-time leaderboards and spectator mode**
+> **A modern, multiplayer online Snake game with real-time leaderboards and spectator mode**
 
 [![Live Demo](https://img.shields.io/badge/demo-live-brightgreen)](https://snake-arena-2w0m.onrender.com/)
 
