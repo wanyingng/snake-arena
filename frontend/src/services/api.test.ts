@@ -34,7 +34,7 @@ describe('api', () => {
             expect(result.user).toEqual(mockResponse.user);
             expect(localStorage.getItem('auth_token')).toBe('test-jwt-token');
             expect(mockFetch).toHaveBeenCalledWith(
-                'http://localhost:8000/api/auth/login',
+                '/api/auth/login',
                 expect.objectContaining({
                     method: 'POST',
                     body: JSON.stringify({ email: 'test@example.com', password: 'password123' }),
@@ -104,7 +104,7 @@ describe('api', () => {
 
             expect(user).toEqual(mockUser);
             expect(mockFetch).toHaveBeenCalledWith(
-                'http://localhost:8000/api/auth/me',
+                '/api/auth/me',
                 expect.objectContaining({
                     headers: expect.objectContaining({
                         'Authorization': 'Bearer valid-token',
@@ -152,7 +152,7 @@ describe('api', () => {
 
             expect(entries).toEqual(mockLeaderboard);
             expect(mockFetch).toHaveBeenCalledWith(
-                'http://localhost:8000/api/leaderboard?mode=walls&limit=10',
+                '/api/leaderboard?mode=walls&limit=10',
                 expect.anything()
             );
         });
@@ -169,7 +169,7 @@ describe('api', () => {
             await api.submitScore(150, 'pass-through');
 
             expect(mockFetch).toHaveBeenCalledWith(
-                'http://localhost:8000/api/leaderboard',
+                '/api/leaderboard',
                 expect.objectContaining({
                     method: 'POST',
                     headers: expect.objectContaining({
@@ -204,7 +204,7 @@ describe('api', () => {
 
             expect(games).toEqual(mockGames);
             expect(mockFetch).toHaveBeenCalledWith(
-                'http://localhost:8000/api/games/active',
+                '/api/games/active',
                 expect.anything()
             );
         });
